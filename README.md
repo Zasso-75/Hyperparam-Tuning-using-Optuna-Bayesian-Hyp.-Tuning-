@@ -2,15 +2,15 @@
 
 This project demonstrates efficient hyperparameter tuning of a **Random Forest Classifier** using three different methods:
 
-* ✅ **Bayesian Optimization with Optuna**
-* ↻ **Grid Search (exhaustive)**
-* 🎲 **Random Search (random sampling)**
+*  **Bayesian Optimization with Optuna**
+*  **Grid Search (exhaustive)**
+*  **Random Search (random sampling)**
 
 ---
 
-## 🚀 Optuna with Bayesian Optimization
+##  Optuna with Bayesian Optimization
 
-### 🧠 What is Bayesian Optimization?
+###  What is Bayesian Optimization?
 
 Bayesian optimization is a smart technique for optimizing expensive functions (like model training). It uses a **surrogate model** to approximate the objective function and an **acquisition function** to decide the next best set of parameters to evaluate.
 
@@ -19,7 +19,7 @@ Bayesian optimization is a smart technique for optimizing expensive functions (l
 
 ---
 
-### ⚙️ Objective Function
+###  Objective Function
 
 We defined an `objective(trial)` function for Optuna where it:
 
@@ -38,13 +38,13 @@ params = {
 
 Optuna explored the space using its internal **TPE-based Bayesian optimization**, and:
 
-✅ Found the best parameters in just **1 minute 13 seconds**.
+ Found the best parameters in just **1 minute 13 seconds**.
 
 ---
 
-## 📊 Comparison with Other Methods
+##  Comparison with Other Methods
 
-### ↻ Grid Search
+###  Grid Search
 
 ```python
 param_grid = {
@@ -62,7 +62,7 @@ param_grid = {
 
 ---
 
-### 🎲 Random Search
+###  Random Search
 
 ```python
 param_dist = {
@@ -80,29 +80,8 @@ param_dist = {
 
 ---
 
-## 🏑 Summary
 
-| Method           | Time     | Fits     | Accuracy | Notes                      |
-| ---------------- | -------- | -------- | -------- | -------------------------- |
-| **Optuna (TPE)** | \~1m 13s | \~50–100 | ✅ Best   | Efficient, adaptive, smart |
-| Grid Search      | \~11m    | 4000     | ✅ Same   | Exhaustive, slow           |
-| Random Search    | \~3–5m   | 500      | \~Same   | Faster, but less efficient |
 
----
-
-## 📁 Project Structure
-
-```
-proj1/
-├── .gitignore
-├── README.md
-├── optuna_tuning.ipynb
-├── grid_random_tuning.ipynb
-└── ... other code
-```
-
----
-
-## 🧠 Conclusion
+##  Conclusion
 
 Optuna with Bayesian optimization (TPE) provided a **faster and smarter** approach to hyperparameter tuning, significantly reducing training time while achieving the same or better performance than traditional grid/random search methods.
